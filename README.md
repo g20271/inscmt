@@ -1,2 +1,2 @@
 # inscmt
-Insert comment tool for kosen 2IT experiment
+Insert comment tool for Kagawa Kosen 2IT experiment
