@@ -3,7 +3,7 @@ Insert comment tool for Kagawa Kosen 2IT experiment
 
 # Features
 * Automatically inserts your name.
-* Easily inserts the results of the C code.
+* Easily inserts the result of the C code.
 
 # Installation
 ```bash
