@@ -27,7 +27,7 @@ fi
 mkdir -p ${install_path%/*}
 
 
-echo "あなたの出席番号を入力してください"
+echo -e "\nあなたの出席番号を入力してください"
 read -p "Number: " number
 echo "あなたの名前を入力してください"
 read -p "Name: " name
