@@ -163,11 +163,10 @@ for file in $*; do
 
     echo -e "\n$filename が終了しました"
 
-    \cp -f $file /tmp/patchedfile
-    sed -i "1i\/*$number $name" /tmp/patchedfile
-    sed -i "2i 「第$syou回$category $bangou」*\/" /tmp/patchedfile
-    sed -i "3i" /tmp/patchedfile
+    echo -e "/*$number $name\n 「第$syou回$category $bangou」 */\n" > /tmp/patchedfile
+    cat $file >> /tmp/patchedfile
     cat /tmp/aout >> /tmp/patchedfile
+
 
     echo -e "挿入済みファイルの生成が完了しました \
     \nVimで開くので出来上がったファイルに問題がないか確認し修正してください(:qで終了)"
