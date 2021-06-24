@@ -1,11 +1,11 @@
 #!/bin/bash
-#v1.1
+#v1.2
 install_path="${HOME}/.local/share/inscmt/inscmt.sh"
 file=${install_path##*/}
 file=${file%%.*}
 
 echo "inscmtを'$install_path'にインストールします
-インストールしようとしているバージョン: v1.1"
+インストールしようとしているバージョン: v1.2"
 
 if [ -e $install_path ]; then
     echo -e "\n既にインストールされていますが置き換えますか? \
@@ -35,7 +35,7 @@ read -p "Name: " name
 
 sed -e "0,/number=/ s/number=/number=$number/" -e "0,/name=\"\"/ s/name=\"\"/name=\"$name\"/" << 'EOS' > $install_path
 #!/bin/bash
-#v1.1
+#v1.2
 #このシェルスクリプトは2020/05/20のutil-linux 2.35の仕様変更に対応しています
 #最新のLinux環境と演習室のCentOS 7を判定します
 
@@ -60,7 +60,7 @@ if [ $# = 0 ]; then
     \nヒント: '*'はワイルドカードというシェル標準の機能です \
     \n他の詳しいシェル展開機能についてはググってください \
     \n \
-    \ninscmt v1.1 made by g20271 \
+    \ninscmt v1.2 made by g20271 \
     \n \
     \nこのシェルスクリプトは2020/05/20のutil-linux 2.35の仕様変更に対応しています \
     \n最新のLinux環境と演習室のCentOS 7を判定します \
@@ -166,6 +166,7 @@ for file in $*; do
     \cp -f $file /tmp/patchedfile
     sed -i "1i\/*$number $name" /tmp/patchedfile
     sed -i "2i 「第$syou回$category $bangou」*\/" /tmp/patchedfile
+    sed -i "3i" /tmp/patchedfile
     cat /tmp/aout >> /tmp/patchedfile
 
     echo -e "挿入済みファイルの生成が完了しました \
