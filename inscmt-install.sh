@@ -137,7 +137,7 @@ for file in $*; do
     echo -e "\nファイル名:$filename カテゴリ:$category 章:$syou 課題:$bangou"
 
 
-    gcc -o a.out $file -lm
+    gcc -o a.out $file -lm -std=c99
 
     echo -e "\n$filename を実行します 例として提出したい標準入力を行ってください\n"
 
