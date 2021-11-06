@@ -155,7 +155,7 @@ for file in $*; do
         script /tmp/out -c 'echo && ./a.out' -q
 
         cat /tmp/out | sed ':a;s/[^\x08]\x08//g;ta' | sed -r "s/[\x1b]\[K|\x1B\[([0-9]{1,2}(;[0-9]{1,2})*)?m//g" | col -b |\
-        sed -e '1d' -e '2d' | sed '${/^$/d;}' | sed -e '1s/^/\n/'| sed -e '2i \/*' -e '$ a *\/' > /tmp/aout
+        sed -e '1d' -e '2d' | sed '${/^$/d;}' | sed -e '1s/^/\n/'| sed -e '2i \/* 実行結果' -e '$ a *\/' > /tmp/aout
 
 
         echo && eval printf -- '-%.0s' {1..$((${#filename}+24))}
